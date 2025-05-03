@@ -1,0 +1,97 @@
+/* Set full height for body and container */
+html,
+body {
+  height: 10%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+/* Ensure the sidebar and main content take up the full viewport height */
+.container-fluid {
+  height: 100vh;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  height: 300vh;
+  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+  padding: 0px;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h1 {
+  color: #f86c1b;
+  text-align: center;
+}
+
+/* Sidebar Items */
+.sidebar .list-group {
+  flex-grow: 1;
+}
+
+.sidebar .list-group-item {
+  background: transparent;
+  color: white;
+  border: none;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.sidebar .list-group-item:hover,
+.sidebar .list-group-item.active {
+  background: linear-gradient(135deg, #f86c1b, #bf25fc);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Main Content */
+main {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 0px;
+}
+
+/* Cards */
+.card {
+  background: linear-gradient(135deg, #fb11bc, #764ba2);
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Chart Styling */
+.chart-title {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* Make chart container fit within the screen */
+.chart-container {
+  height: 50vh; /* Adjust height dynamically */
+  max-height: 100px; /* Prevent chart from overflowing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure the canvas resizes properly */
+canvas {
+  max-width: 100%;
+  max-height: 80%;
+}
